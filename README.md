@@ -86,4 +86,12 @@ There is quite a lot to do, so we keep it simple and easy. Step by step.
   #define LEDpin D5
   `
   </li>
+  <li> Define the pin as output 
+  
+  `
+  pinMode(LEDpin, OUTPUT);
+  `
+  </li>
+  
+  
     
