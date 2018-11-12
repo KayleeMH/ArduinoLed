@@ -200,4 +200,4 @@ The code is now done. If you have done everything correctly you should have the 
 The if else statements with setPixelColor's have become quite long due to calling on each single pixel, rather than writing a loop. If you want to make your code shorter (and neater), it's better to write this in a loop, rather than repeating it over and over. 
 I'm quite happy with how it turned out, but the code is quite extensive and could be shorter!
 
-<b> Happy coding ! </br>
+<b> Happy coding ! </b>
