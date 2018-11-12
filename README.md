@@ -124,7 +124,80 @@ There is quite a lot to do, so we keep it simple and easy. Step by step.
   Otherwise it won't work. </li>
   <li> Write the rest of the statement (else if & else). You can make it as long and as complicated as you like. </li>
   <li> <b> Once you have completed your code, it's time to test ! Upload your sketch and open the serial monitor. You should be able to see the value and depending on what value, the ledstrip should light up in the colours you decided to go with ! </li>
+  </ol>
   
-
   
+  #### Now add the light sensor
+  If it becomes dark (low values of the light sensor) the remaining leds on the led strip will turn on
+  
+<ol>
+  <li> Define the light sensor (above the setup, with the other define's)
     
+     `
+    #define LIGHTsns A0
+    `
+  </li>
+  <li> In the void loop, we want to read the value the sensor gives. We create a variable (int) to store the value our light sensor gives
+  
+  ```
+  //read the light sensor value
+  int sensorValue = analogRead(LIGHTsns);
+  Serial.print("Light value: ");
+  Serial.println(sensorValue);
+  ```
+  </li>
+  <li> <b> TEST THIS STEP </b> Upload the code to your node, and see if you have to light value displayed and it changes if you cover the light sensor (with your hand for example).
+  <li> Now that we have our value stored, we can use it in an if/else statement, like we did earlier! The light values range from 0 to 1024. I decided to split it into 5 parts </li>
+  <li> For every 200 (0 - 200, 200 - 400, and so on) we set a different brightness on the led strip. The lower the value, the higher we turn on the led. </li>
+  <li> However, we could use ` strip.setBrightness `, but normally this is only used once, in the setup. If repeatedly used, it's better to use something else. I use the colour white and black, and all values in between. 255, 255, 255 is white. 0, 0, 0 is black (off).
+  <li> Time to write another if, else ! I used the leds ranging from 4 - 9, as I earlier used 0 - 2. I don't use Led #3 to show it's about two different things with a little gap between it. </li>
+  <li> Code, code, code 
+  
+  ```
+  if (sensorValue >= 0 && sensorValue <= 200) {
+    strip.setPixelColor(4, 255, 255, 255);
+    strip.setPixelColor(5, 255, 255, 255);
+    strip.setPixelColor(6, 255, 255, 255);
+    strip.setPixelColor(7, 255, 255, 255);
+    strip.setPixelColor(8, 255, 255, 255);
+    strip.setPixelColor(9, 255, 255, 255);
+    strip.show(); 
+  }
+  ```
+  </li>
+  <li> repeat this for all values.
+  
+  ```
+  else if (sensorValue >= 200 && sensorValue <= 400) {
+    strip.setPixelColor(4, 200, 200, 200);
+    strip.setPixelColor(5, 200, 200, 200);
+    strip.setPixelColor(6, 200, 200, 200);
+    strip.setPixelColor(7, 200, 200, 200);
+    strip.setPixelColor(8, 200, 200, 200);
+    strip.setPixelColor(9, 200, 200, 200);
+    strip.show();
+
+  }
+  ```
+  </li>
+  <li> Once finished with all values and the complete if, else statement.. <b> you're done ! </b> </li>
+  <li> Test ! The light value should show up the serial monitor (as well as your temperature from earlier), put your hand over the light sensor and see the lights turn off. </li>
+ </ol>
+ 
+The code is now done. If you have done everything correctly you should have the first three leds being yellow/orange depending on the temperature, one led turned off (fourth) and the remaining 6 turned on in white, the brightness depending on the amount of light the sensor picks up.
+  
+  <i>General tips: </i>
+  <ul>
+  <li> Check if you have selected the right board (Node MCU 1.0 ESP-12E Module in my case) </li>
+  <li> Check the port </li>
+  <li> The baud rate of your monitor should match what you have mentioned in the code (9600) </li>
+  <li> Don't understimate the power of Serial Monitor, send data to it to check if your sensors work ! </li>
+  
+</ul>
+    
+### Conclusion
+
+The if else statements with setPixelColor's have become quite long due to calling on each single pixel, rather than writing a loop. If you want to make your code shorter (and neater), it's better to write this in a loop, rather than repeating it over and over. 
+I'm quite happy with how it turned out, but the code is quite extensive and could be shorter!
+
+<b> Happy coding ! </br>
