@@ -86,12 +86,45 @@ There is quite a lot to do, so we keep it simple and easy. Step by step.
   #define LEDpin D5
   `
   </li>
-  <li> Define the pin as output 
+  <li> Define the pin as output, in the setup
   
   `
   pinMode(LEDpin, OUTPUT);
   `
   </li>
+  <li> In the setup, start up the strip.
   
+  ```
+  //setup the strip
+  strip.begin();
+  strip.show();
+```
+</li>
+  
+  </ol>
+  
+  <b> Now we will write an if/else statement, using the values of the sensor to turn on the ledstrip. I use the first three leds on my strip to display the temperature. </b>
+  <ol>
+  <li> I decided to go with 19 degrees = 1 led on, 20 degrees = 2 leds, 20 and above = 3 leds. If the temperature is below 19 it'd also be one led, but in a different colour. </li>
+  <li> From the earlier code, we have the temperature (t), so we just have to use it in our if, else statement. With setPixelColor, we turn on the colour of a led. The first number (0, 1, 2) is the number of the led we chose to colour. The following numbers stand for RGB. (fully red would be: 255, 0, 0)
+    
+    if (t == 19.00){
+    strip.setPixelColor(0, 252, 236, 10);
+    strip.setPixelColor(1, 0, 0, 0);
+    strip.setPixelColor(2, 0, 0, 0);
+    strip.show();
+    Serial.println("1 yellow");}
+  
+  </li>
+  <li> Don't forget the 
+  
+  ` 
+  strip.show();
+  ` ! 
+  Otherwise it won't work. </li>
+  <li> Write the rest of the statement (else if & else). You can make it as long and as complicated as you like. </li>
+  <li> <b> Once you have completed your code, it's time to test ! Upload your sketch and open the serial monitor. You should be able to see the value and depending on what value, the ledstrip should light up in the colours you decided to go with ! </li>
+  
+
   
     
