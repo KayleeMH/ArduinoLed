@@ -192,6 +192,7 @@ The code is now done. If you have done everything correctly you should have the 
   <li> Check the port </li>
   <li> The baud rate of your monitor should match what you have mentioned in the code (9600) </li>
   <li> Don't understimate the power of Serial Monitor, send data to it to check if your sensors work ! </li>
+  <li> Use comments to remember which part does what in your code </li>
   
 </ul>
     
