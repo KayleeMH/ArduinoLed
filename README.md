@@ -123,7 +123,7 @@ There is quite a lot to do, so we keep it simple and easy. Step by step.
   ` ! 
   Otherwise it won't work. </li>
   <li> Write the rest of the statement (else if & else). You can make it as long and as complicated as you like. </li>
-  <li> <b> Once you have completed your code, it's time to test ! Upload your sketch and open the serial monitor. You should be able to see the value and depending on what value, the ledstrip should light up in the colours you decided to go with ! </li>
+  <li> <b> Once you have completed your code, it's time to test ! Upload your sketch and open the serial monitor. You should be able to see the value and depending on what value, the ledstrip should light up in the colours you decided to go with ! </b></li>
   </ol>
   
   
