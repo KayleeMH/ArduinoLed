@@ -22,7 +22,40 @@ This repository is about the temperature and light, both displayed on the ledstr
 #### Software
 <ul>
   <li>Arduino</li>
-  <li>DHT library (download: https://github.com/adafruit/DHT-sensor-library)</li>
+  <li>DHT library (download: https://github.com/adafruit/DHT-sensor-library)
+  Install by dragging the extracted map into your Arduino Libraries (Documents > Arduino > Libaries) </li>
   <li>Adafruit_Sensor library by Adafruit, you can find it under manage libraries (Sketch > Include Libraries > Manage Libraries) </li>
   <li>Adaruit Neopixels by Adafruit, found under manage libraries as well</li>
 </ul>
+
+### Setting up the hardware
+<img src="https://i.imgur.com/p8vR2Pu.jpg" alt="Circuit Setup">
+
+Light Sensor -  Connect to A0 and 3V <br>
+DHT -   
+<ul>
+  <li>Left pin to 3V</li>
+  <li> Second pin (second from left) to D1</li>
+  <li>Third pin isn't used</li>
+  <li>Fourth pin (right pin) to Ground (G)</li>
+</ul>
+Led strip -     
+<ul>
+  <li>GND to ground (G)</li>
+  <li>Din to D5</li>
+  <li>+5V to 3V</li>
+</ul>
+
+Images from:<br>
+https://www.maxphi.com/wp-content/uploads/2017/08/dht11-pinout-173x300.png
+https://circuits4you.com/wp-content/uploads/2018/01/esp8266-lcd-display-16x2.png
+
+### And now.. the code
+There is quite a lot to do, so we keep it simple and easy. Step by step.
+
+#### First temperature/humidity sensor (DHT11) with the ledstrip
+<ol>
+  <li><b>1.</b> Open the <b>DHTtester example</b>. File > Examples > DHT sensor library. If you don't have this library, go back to installing the software, see above. </li>
+  <li><b>2.</b> Change the defined pin to <b>D1</b> </li>
+  <li><b>3.</b> Uncomment the sensor you are using, we are using DHT11 
+
