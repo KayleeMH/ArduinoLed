@@ -1,4 +1,4 @@
-## Temperature and Light sensors, displayed as colours on a neopixel ledstrip
+## Temperature and Light, displayed (as colours) on a neopixel ledstrip
 
 ### Introduction
 This small project is a part of a bigger project about 'intelligent' plants. The plant (sensors) will inform the user about its status, regarding humidity, temperature, light and moisture in the soil.
