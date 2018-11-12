@@ -68,10 +68,8 @@ There is quite a lot to do, so we keep it simple and easy. Step by step.
 #### Now connect the ledstrip to it (Neopixels)
 <ol>
   <li> In your current sketch (with the DHT sensor), include the Adafruit Neopixel library
-    
-    `
+   
     #include <Adafruit_NeoPixel.h>
-    `
     
   </li>
   <li> Define the led strip. The number is the amount of leds, my strip has 10, but change this to the amount you have
