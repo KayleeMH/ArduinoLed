@@ -53,7 +53,7 @@ https://circuits4you.com/wp-content/uploads/2018/01/esp8266-lcd-display-16x2.png
 ### And now.. the code
 There is quite a lot to do, so we keep it simple and easy. Step by step.
 
-#### First temperature/humidity sensor (DHT11) with the ledstrip
+#### First temperature/humidity sensor (DHT11)
 <ol>
   <li> Open the <b>DHTtester example</b>. File > Examples > DHT sensor library. If you don't have this library, go back to installing the software, see above. </li>
   <li> Change the defined pin to <b>D1</b> </li>
@@ -62,4 +62,28 @@ There is quite a lot to do, so we keep it simple and easy. Step by step.
   <li> Remove Fahrenheit and Heat Index lines (Yellow Lines in screenshot) (Unless you want to display Celcius and Fahrenheit)
     <img src="https://i.imgur.com/3vYmcEo.png"></li>
   <li> The last line of all the Serial.print's should be Serial.println. This prints the value on a new line. Every new value will be on a new line instead of onelong line </li>
-  <li> Upload the sketch and open the Serial Monitor to see if this part works ! It should look something like this: <img src="https://i.imgur.com/yYXoNss.png">
+  <li> Upload the sketch and open the Serial Monitor to see if this part works ! It should look something like this: <img src="https://i.imgur.com/yYXoNss.png"></li>
+</ol>
+
+#### Now connect the ledstrip to it (Neopixels)
+<ol>
+  <li> In your current sketch (with the DHT sensor), include the Adafruit Neopixel library
+    
+    `
+    #include <Adafruit_NeoPixel.h>
+    `
+    
+  </li>
+  <li> Define the led strip. The number is the amount of leds, my strip has 10, but change this to the amount you have
+  
+  ` 
+  Adafruit_NeoPixel strip = Adafruit_NeoPixel(10, LEDpin, NEO_GRB + NEO_KHZ800);
+  `
+  </li>
+  <li> Define the pin we use for the ledstrip
+  
+  `
+  #define LEDpin D5
+  `
+  </li>
+    
