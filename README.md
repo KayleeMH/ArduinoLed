@@ -55,7 +55,11 @@ There is quite a lot to do, so we keep it simple and easy. Step by step.
 
 #### First temperature/humidity sensor (DHT11) with the ledstrip
 <ol>
-  <li><b>1.</b> Open the <b>DHTtester example</b>. File > Examples > DHT sensor library. If you don't have this library, go back to installing the software, see above. </li>
-  <li><b>2.</b> Change the defined pin to <b>D1</b> </li>
-  <li><b>3.</b> Uncomment the sensor you are using, we are using DHT11 
-
+  <li> Open the <b>DHTtester example</b>. File > Examples > DHT sensor library. If you don't have this library, go back to installing the software, see above. </li>
+  <li> Change the defined pin to <b>D1</b> </li>
+  <li> Uncomment the sensor you are using, we are using DHT11. See image <img src="https://i.imgur.com/dupYad5.png"></li>
+  <li> Delete all the commented lines to clean your file (not necessary) </li>
+  <li> Remove Fahrenheit and Heat Index lines (Yellow Lines in screenshot) (Unless you want to display Celcius and Fahrenheit)
+    <img src="https://i.imgur.com/3vYmcEo.png"></li>
+  <li> The last line of all the Serial.print's should be Serial.println. This prints the value on a new line. Every new value will be on a new line instead of onelong line </li>
+  <li> Upload the sketch and open the Serial Monitor to see if this part works ! It should look something like this: <img src="https://i.imgur.com/yYXoNss.png">
