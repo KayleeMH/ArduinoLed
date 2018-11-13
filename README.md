@@ -199,9 +199,11 @@ The code is now done. If you have done everything correctly you should have the 
 The if else statements with setPixelColor's have become quite long due to calling on each single pixel, rather than writing a for loop. If you want to make your code shorter (and neater), it's better to write this in a loop, rather than repeating it over and over. 
 I'm quite happy with how it turned out, but the code is quite extensive and could be shorter!
 
-For more information on for loops: http://www.toptechboy.com/arduino/arduino-lesson-3-simple-led-circuit/
-Advanced coding for Arduino Neopixel: https://learn.adafruit.com/adafruit-neopixel-uberguide/advanced-coding/
-Cheap sensors you can purchase and play around with: https://randomnerdtutorials.com/21-arduino-modules-you-can-buy-for-less-than-2/
+For more information on for loops: http://www.toptechboy.com/arduino/arduino-lesson-3-simple-led-circuit/ <br>
+Advanced coding for Arduino Neopixel: https://learn.adafruit.com/adafruit-neopixel-uberguide/advanced-coding/ <br>
+Information about the DHT11 sensor: http://www.circuitbasics.com/how-to-set-up-the-dht11-humidity-sensor-on-an-arduino/ <br>
+How the LDR light sensor works: https://www.kitronik.co.uk/blog/how-an-ldr-light-dependent-resistor-works/ <br>
+Cheap sensors you can purchase and play around with: https://randomnerdtutorials.com/21-arduino-modules-you-can-buy-for-less-than-2/ <br>
 More easy projects for inspiration: https://www.makeuseof.com/tag/10-great-arduino-projects-for-beginners/
 
 
