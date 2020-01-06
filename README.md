@@ -189,7 +189,7 @@ The code is now done. If you have done everything correctly you should have the 
   <li> Check if you have selected the right board (Node MCU 1.0 ESP-12E Module in my case) </li>
   <li> Check the port </li>
   <li> The baud rate of your monitor should match what you have mentioned in the code (9600) </li>
-  <li> Don't understimate the power of Serial Monitor, send data to it to check if your sensors work ! </li>
+  <li> Don't underestimate the power of Serial Monitor, send data to it to check if your sensors work ! </li>
   <li> Use comments to remember which part does what in your code </li>
   
 </ul>
